@@ -26,6 +26,25 @@ function fetchTrendingMovies() {
         });
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    const splashScreen = document.getElementById('splash-screen');
+    const videoContainer = document.getElementById('video-container');
+    const introVideo = document.getElementById('intro-video');
+    const mainInterface = document.getElementById('main-interface');
+
+    // When user clicks on splash screen, hide it and show the video
+    splashScreen.addEventListener('click', function() {
+        splashScreen.style.display = 'none';
+        videoContainer.style.display = 'block';
+        introVideo.play();
+    });
+
+    // When the video ends, hide the video container and show the main interface
+    introVideo.addEventListener('ended', function() {
+        videoContainer.style.display = 'none';
+        mainInterface.style.display = 'block';
+    });
+});
 
 function buildBannerSection(movie){
     const bannerCont = document.getElementById('banner-section');

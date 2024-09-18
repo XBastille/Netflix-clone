@@ -10,7 +10,17 @@
     <script src="netflix.js" defer></script>
 </head>
 <body>
-    <header id="header" class="">
+    <div id="splash-screen">
+        <img src="/media/Netflix-logo.jpg" alt="Netflix Logo" id="logo-image">
+    </div>
+    <div id="video-container" style="display:none;">
+        <video id="intro-video" width="100%" height="100%" autoplay>
+            <source src="/media/netflix-intro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div id="main-interface" style="display:none;">
+    <header id="header">
         <div class="header-cont container">
             <div class="left-cont">
                 <img class="header-brand" src="https://images.ctfassets.net/4cd45et68cgf/7LrExJ6PAj6MSIPkDyCO86/542b1dfabbf3959908f69be546879952/Netflix-Brand-Logo.png?w=684&h=456" alt="">
