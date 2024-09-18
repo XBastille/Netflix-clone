@@ -1,14 +1,11 @@
-# Base image
-FROM nginx:alpine
 
-# Set the working directory
-WORKDIR /usr/share/nginx/html
+FROM python:3.9-slim
 
-# Copy all files from the current directory to the working directory in the container
+WORKDIR /app
+
+# Copy all files into the container
 COPY . .
 
-# Expose the port NGINX runs on
-EXPOSE 80
+EXPOSE 8000
 
-# Start the NGINX server
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["python3", "-m", "http.server", "8000"]
