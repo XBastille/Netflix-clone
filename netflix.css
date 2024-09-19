@@ -34,6 +34,91 @@
     object-fit: cover; 
 }
 
+
+#movie-banner {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center; 
+    padding-left: 60px; 
+    color: white;
+}
+
+#movie-banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 1; 
+}
+
+#movie-banner .movie-details {
+    position: relative;
+    z-index: 2; 
+    text-align: left;
+    max-width: 600px; 
+}
+
+#movie-banner p {
+    font-size: 20px; 
+    color: #ccc; 
+    margin-bottom: 30px;
+}
+
+#movie-banner h1 {
+    font-size: 80px; 
+    font-weight: 700; 
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: white; 
+}
+
+.movie-details {
+    padding: 20px;
+    color: white;
+}
+
+#trailer-container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.movie-info h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.movie-info p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+.action-buttons-cont {
+    display: flex;
+    gap: 15px; 
+}
+
+.action-button {
+    background-color: white;
+    color: black;
+    padding: 10px 30px; 
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #e50914; 
+    color: white;
+}
+
 html,body{
     background-color: #141414;
     padding:0;
@@ -334,11 +419,7 @@ body.modal-active .search-modal {
     line-height: 1.3;
     max-width: 40%;
 }
-.action-buttons-cont{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
+
 .action-button{
     border:none;
     background-color: white;
