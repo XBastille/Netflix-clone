@@ -113,7 +113,7 @@ function buildMoviesSection(list, categoryName) {
             : `${imgPath}${item.backdrop_path}`;  
 
         return `
-        <div class="movie-item">
+        <div class="movie-item" onclick="location.href='movie-details.html?id=${item.id}&title=${encodeURIComponent(title)}'">
             <img class="move-item-img" src="${imagePath}" alt="${title}" />
             <div class="movie-info-overlay">
                 <h3>${title}</h3>
