@@ -4,6 +4,10 @@
 
 This project is a front-end Netflix clone designed to simulate the look and feel of Netflix's streaming platform. It fetches movie data from The Movie Database (TMDb) API and allows users to browse trending movies, view details, and search for specific titles. Additional features such as detailed movie pages and integrated trailers have been added.
 
+## Live Demo
+
+Check out the live version of the project here: [Netflix Clone](https://mynetflixx.onrender.com/netflix.html)
+
 ## Features
 
 - **Responsive Design**: The layout adapts to different screen sizes.
