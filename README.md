@@ -6,7 +6,7 @@ This project is a front-end Netflix clone designed to simulate the look and feel
 
 ## Live Demo
 
-Check out the live version of the project here: [Netflix Clone](https://mynetflixx.onrender.com/netflix.html)
+Check out the live version of the project here: [Netflix Clone](https://mynetflixx.surge.sh/)
 
 ## Features
 
