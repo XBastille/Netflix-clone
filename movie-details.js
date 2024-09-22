@@ -2,12 +2,12 @@ const apikey = "e950e51d5d49e85f7c2f17f01eb23ba3";
 const apiEndpoint = "https://api.themoviedb.org/3";
 const imgPath = "https://image.tmdb.org/t/p/original";
 
-// Get movie data from query parameters
+
 const urlParams = new URLSearchParams(window.location.search);
 const movieId = urlParams.get('id');
 const movieTitle = urlParams.get('title');
 
-// Fetch movie details
+
 function fetchMovieDetails(movieId) {
     fetch(`${apiEndpoint}/movie/${movieId}?api_key=${apikey}`)
         .then(response => response.json())
@@ -17,7 +17,7 @@ function fetchMovieDetails(movieId) {
         .catch(err => console.error(err));
 }
 
-// Display movie details on the page
+
 function displayMovieDetails(movie) {
     const bannerSection = document.getElementById('movie-banner');
     const movieTitleElem = document.getElementById('movie-title');
@@ -27,12 +27,11 @@ function displayMovieDetails(movie) {
     movieTitleElem.textContent = movie.title;
     movieOverviewElem.textContent = movie.overview;
 
-    fetchMovieTrailer(movie.title);  // Fetch the trailer
+    fetchMovieTrailer(movie.title); 
 }
 
-// Fetch YouTube movie trailer based on the movie title
 function fetchMovieTrailer(movieTitle) {
-    const youtubeApiKey = "AIzaSyA_eZ5WJhmYhRQOM8-jAyVIzzdfWUlp_P0"; // Add your YouTube API key
+    const youtubeApiKey = "AIzaSyA_eZ5WJhmYhRQOM8-jAyVIzzdfWUlp_P0"; 
     fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${movieTitle} trailer&key=${youtubeApiKey}`)
         .then(response => response.json())
         .then(data => {
